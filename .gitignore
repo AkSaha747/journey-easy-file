@@ -1,0 +1,37 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+Backend/logs/
+
+# Dependencies
+node_modules/
+Frontend/node_modules/
+Backend/node_modules/
+
+# Build artifacts
+dist/
+build/
+Frontend/dist/
+Backend/dist/
+
+# Coverage/cache
+coverage/
+.cache/
+Frontend/.cache/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+Frontend/.env
+Backend/.env
+
+# Keep examples tracked
+!Frontend/.env.example
+!Backend/.env.example

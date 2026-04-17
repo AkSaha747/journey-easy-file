@@ -1,0 +1,57 @@
+services:
+  - type: web
+    name: journeyeasy-api
+    runtime: node
+    rootDir: Backend
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: FRONTEND_URL
+        value: https://mozahid-diu.github.io
+      - key: DB_DIALECT
+        value: mysql
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 3306
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_ACCESS_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: QR_SECRET
+        sync: false
+      - key: PAYMENT_CALLBACK_SECRET
+        sync: false
+      - key: PAYMENT_GATEWAY_IPS
+        value: 127.0.0.1,::1
+      - key: PAYMENT_GATEWAY_URL
+        value: https://sandbox.sslcommerz.com
+      - key: PAYMENT_STORE_ID
+        sync: false
+      - key: PAYMENT_STORE_PASSWORD
+        sync: false
+      - key: PAYMENT_AUTO_CONFIRM
+        value: true
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
